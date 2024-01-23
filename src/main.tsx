@@ -4,10 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./components/App/App.tsx";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <BrowserRouter basename="/learn-lingo">
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+ReactDOM.createRoot(
+	document.getElementById("root")!,
+).render(
+	<React.StrictMode>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>,
 );
