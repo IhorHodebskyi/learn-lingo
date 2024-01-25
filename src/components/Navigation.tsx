@@ -4,7 +4,7 @@ interface NavigationProps {}
 export default function Navigation({}: NavigationProps) {
 	return (
 		<>
-			<ul>
+			<ul className="flex">
 				<li>
 					<NavLink to="/">Home</NavLink>
 				</li>
