@@ -10,19 +10,19 @@ export default function Modal({
 	children,
 }: ModalProps) {
 	useEffect(() => {
-		window.addEventListener("keydown", e => {
-			if (e.code === "Escape") {
-				onClose();
-			}
-		});
+		window.addEventListener("keydown", handleKeyDown);
 		return () => {
-			window.removeEventListener("keydown", e => {
-				if (e.code === "Escape") {
-					onClose();
-				}
-			});
+			window.removeEventListener("keydown", handleKeyDown);
 		};
 	}, []);
+
+	const handleKeyDown = (
+		e: KeyboardEvent | React.KeyboardEvent,
+	) => {
+		if (e.code === "Escape") {
+			onClose();
+		}
+	};
 
 	const handleClickBackdrop = (
 		e: MouseEvent<HTMLDivElement>,
