@@ -15,7 +15,6 @@ export default function Button({
 	onclick,
 	children,
 	type,
-	size,
 }: ButtonProps) {
 	return (
 		<button
