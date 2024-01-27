@@ -1,23 +1,25 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+import clsx from "clsx";
 
-interface ButtonProps {
-	className?: string;
+interface ButtonProps
+	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	disabled?: boolean;
 	onclick?: () => void;
 	children: ReactNode | string;
-	type: "submit" | "reset" | "button" | undefined;
+	type: "submit" | "reset" | "button";
+	size: string;
 }
 
 export default function Button({
-	className,
 	disabled,
 	onclick,
 	children,
 	type,
+	size,
 }: ButtonProps) {
 	return (
 		<button
-			className={className}
+			className={clsx("")}
 			disabled={disabled}
 			onClick={onclick}
 			type={type}

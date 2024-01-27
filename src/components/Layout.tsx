@@ -4,11 +4,11 @@ interface LayoutProps {}
 
 export default function Layout({}: LayoutProps) {
 	return (
-		<div>
+		<>
 			<AppBar />
 			<main>
 				<Outlet />
 			</main>
-		</div>
+		</>
 	);
 }

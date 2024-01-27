@@ -1,22 +1,15 @@
+import Bar from "./Bar";
 import Navigation from "./Navigation";
-import Logo from "/icon/logo.svg";
-import Login from "/icon/login.svg";
-import Button from "./Button";
+import Sprite from "/icon/symbol.svg";
+
 export default function AppBar() {
 	return (
-		<div className="flex">
-			<img src={Logo} width={133} height={28} />
+		<header className="flex justify-around items-center h-14">
+			<svg className="" width={133} height={28}>
+				<use href={`${Sprite}#logo`} />
+			</svg>
 			<Navigation />
-			<ul>
-				<li className="">
-					<Button type="button">
-						<img src={Login} width={73} height={20} />
-					</Button>
-				</li>
-				<li>
-					<Button type="button">Registration</Button>
-				</li>
-			</ul>
-		</div>
+			<Bar />
+		</header>
 	);
 }
