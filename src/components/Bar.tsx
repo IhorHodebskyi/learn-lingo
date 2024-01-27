@@ -1,5 +1,8 @@
 import { useState } from "react";
 import Sprite from "/icon/symbol.svg";
+import Modal from "./Modal";
+import LogIn from "./LogIn";
+import SignIn from "./SignIn";
 
 export default function Bar() {
 	const [showLogin, setShowLogin] = useState(false);
@@ -19,6 +22,11 @@ export default function Bar() {
 						<use href={`${Sprite}#login`} />
 					</svg>
 				</button>
+				{showLogin && (
+					<Modal onClose={toggleLogin}>
+						<LogIn />
+					</Modal>
+				)}
 			</li>
 			<li>
 				<button
@@ -28,6 +36,11 @@ export default function Bar() {
 				>
 					Registration
 				</button>
+				{showSignIn && (
+					<Modal onClose={toggleSingIn}>
+						<SignIn />
+					</Modal>
+				)}
 			</li>
 		</ul>
 	);
