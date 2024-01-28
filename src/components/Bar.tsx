@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Sprite from "/icon/symbol-defs.svg";
 import Modal from "./Modal";
 import LoginForm from "./LoginForm";
 import SignUpForm from "./SignUpForm";

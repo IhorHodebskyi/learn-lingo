@@ -1,5 +1,5 @@
 import { ReactNode, useEffect, MouseEvent } from "react";
-import Sprite from "/icon/symbol-defs.svg";
+
 interface ModalProps {
 	onClose: () => void;
 	children: ReactNode;
