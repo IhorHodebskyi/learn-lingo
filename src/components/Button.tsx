@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import clsx from "clsx";
 
 interface ButtonProps
 	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -18,7 +17,6 @@ export default function Button({
 }: ButtonProps) {
 	return (
 		<button
-			className={clsx("")}
 			disabled={disabled}
 			onClick={onclick}
 			type={type}

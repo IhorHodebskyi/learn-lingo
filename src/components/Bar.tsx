@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Sprite from "/icon/symbol.svg";
+import Sprite from "/icon/symbol-defs.svg";
 import Modal from "./Modal";
-import LogIn from "./LogIn";
-import SignIn from "./SignIn";
+import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
 
 export default function Bar() {
 	const [showLogin, setShowLogin] = useState(false);
@@ -10,7 +10,6 @@ export default function Bar() {
 	const toggleLogin = () => {
 		setShowLogin(!showLogin);
 	};
-
 	const toggleSingIn = () => {
 		setShowSignIn(!showSignIn);
 	};
@@ -18,13 +17,14 @@ export default function Bar() {
 		<ul className="flex justify-around items-center gap-8">
 			<li>
 				<button type="button" onClick={toggleLogin}>
-					<svg width={73} height={20}>
-						<use href={`${Sprite}#login`} />
-					</svg>
+					<img
+						className="w-[73px] h-[20px]"
+						src="/icon/login.png"
+					/>
 				</button>
 				{showLogin && (
 					<Modal onClose={toggleLogin}>
-						<LogIn />
+						<LoginForm />
 					</Modal>
 				)}
 			</li>
@@ -38,7 +38,7 @@ export default function Bar() {
 				</button>
 				{showSignIn && (
 					<Modal onClose={toggleSingIn}>
-						<SignIn />
+						<SignUpForm />
 					</Modal>
 				)}
 			</li>
