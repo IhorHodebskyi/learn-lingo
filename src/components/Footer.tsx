@@ -2,20 +2,23 @@ import FooterList from "./FooterList";
 
 interface FooterProps {}
 export interface Data {
-	numeric: number;
+	numeric: string;
 	advantage: string;
 }
 const data: Data[] = [
-	{ numeric: 32000, advantage: "Experienced tutors" },
-	{ numeric: 300000, advantage: "5-star tutor reviews" },
-	{ numeric: 120, advantage: "Subjects taught" },
-	{ numeric: 200, advantage: "Tutor nationalities" },
+	{
+		numeric: "32,000",
+		advantage: "Experienced tutors",
+	},
+	{ numeric: "300,000", advantage: "5-star tutor reviews" },
+	{ numeric: "120", advantage: "Subjects taught" },
+	{ numeric: "200", advantage: "Tutor nationalities" },
 ];
 
 export default function Footer({}: FooterProps) {
 	return (
 		<footer>
-			<ul className="flex justify-around items-center outline-dashed outline-[1.px] outline-offset-[2px]  ">
+			<ul className="flex justify-around items-center m-auto max-w-[1312px] px-[132px] py-[40px] gap-[100px] rounded-[30px] border-dashed border-solid  border-2 border-[#F4C550] ">
 				<FooterList data={data} />
 			</ul>
 		</footer>
